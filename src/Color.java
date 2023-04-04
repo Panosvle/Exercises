@@ -11,6 +11,21 @@ public class Color {
         this.b = b;
     }
 
+    public String convertToHex(){
+
+        String redString = Integer.toHexString(r);
+        redString = r < 16 ?  "0" + redString : redString;
+
+        String greenString = Integer.toHexString(g);
+        greenString = g < 16 ?  "0" + greenString : greenString;
+
+        String blueString = Integer.toHexString(b);
+        blueString = b < 16 ?  "0" + blueString : blueString;
+
+
+        return "#" + redString + greenString  + blueString;
+    }
+
     public String getName() {
         return name;
     }
